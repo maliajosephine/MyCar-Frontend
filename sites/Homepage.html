@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/289849e991.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../Design/main.css">
+
+    <title>myCar</title>
+</head>
+
+<body>
+    
+     <!-- Navigationsleiste-->
+
+     <header>
+      
+        <a href="../sites/Homepage.html" class="logo"><h1>mycar.</h1></a> <!-- Logo Navigationsleiste-->
+
+        <ul class="navbar"> <!-- Anordnung Navigationsleiste mitte-->
+            <li><a href="../sites/mietwagen_uebersicht.html">Mietautos</a></li> 
+            <li><a href="../sites/Standorte.html">Standorte</a></li>
+            <li><a href="../sites/Kontakt.html">Über uns</a></li>
+        </ul>
+        <div class="side-navbar-btn"> <!-- Anordnung Navigationsleiste button rechts-->
+            <a href=""><i class="fa-solid fa-user-large fa-xl"></i></a>
+            <div class="side-nav-dropdown"> <!-- Navigationsleiste button rechts Dropdown-->
+                <a href="../sites/MeineBuchungen.html">Meine Buchungen</a>
+                <a href="../sites/login-seite.html">Log In</a>
+                <a href="../sites/logout.html">Log Out</a>
+            </div>
+        </div>    
+    
+    </header>
+    
+
+
+    <!-- Starting Image + Filter-->
+    <section class="startingimage-homepage"> <!-- starting image / Hintergrund Filter-->
+        
+            <div class="slogan-card"> <!-- weißer Rahmen Filterbox-->
+                <h1>mylife. &nbsp;   myride. &nbsp; mycar.</h1>
+                <h2>Jetzt dein Wunschauto an einem unserer 14 Standorte buchen.</h2>
+                    <div class="filter"> <!-- Anordnung Filter-->
+                        <form action="">
+                            <div class="input-box"> <!-- Input box -->
+                                <span> Standort</span>
+                                <select class="select-location" id="Standorte" name="Standorte">
+                                    <option value="Hamburg">Hamburg</option>
+                                    <option value="Berlin">Berlin</option>
+                                    <option value="Leipzig">Bochum</option>
+                                  </select>
+                            </div>
+                            <div class="input-box"> <!-- Input box -->
+                                <span> Von</span>
+                                <input type="text" name="" id="" placeholder="Startdatum" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='date'}">
+                            </div>
+                            <div class="input-box"> <!-- Input box -->
+                                <span> Bis</span>
+                                <input type="text" name="" id="" placeholder="Enddatum" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='date'}">
+                            </div>
+                            <div class="submit"> <!-- Input box -->
+                            <input type="submit" name="" id="" class="submitbutton">
+                            </div>   
+                        </form>
+                       
+                    </div>
+            
+            </div>   
+
+    </section>
+
+
+    <!-- USP (neu)-->
+
+    <section class="container-usp"> <!-- Anordnung USPs -->
+
+        <h2>Unser USP</h2>
+
+            <div class="uspcontent"> <!-- Einzelnes USP-->
+                   <i class="fa-solid fa-percent icon"></i>
+                    <div> Exklusive Rabatte</div>
+                    <p>für Premium Mietglieder durch Meilen sammeln</p>
+            </div>
+
+            <div class="uspcontent"> <!-- Einzelnes USP-->
+                <i class="fa-solid fa-car-burst icon"></i>
+                 <div>Versicherungsschutz</div>
+                 <p >für jegliche Schäden an ihrem Mietwagen</p>
+            </div>
+
+            <div class="uspcontent"> <!-- Einzelnes USP-->
+                <i class="fa-solid fa-circle-info icon" ></i>
+                 <div>24/7 Service</div>
+                 <p >per Telefon oder per App immer und überall</p>
+            </div>
+
+            <div class="uspcontent"> <!-- Einzelnes USP-->
+                <i class="fa-solid fa-leaf icon" s></i>
+                <div>Nachhaltig</div>
+                    <p >leben, mit unserer neuen E-FLotte</p>
+            </div>
+        
+    </section>
+
+    
+   
+
+
+    <!-- Our Fleet-->
+    <section class="ourfleet"> <!-- Hintergrund Our Fleet-->
+        <h2> Unsere Flotte</h2>
+        <div class="gridfleet">   <!-- Anordnung Fahrzeugtypen-->          
+                <div class="cartype"></div> <!-- Einzelner Fahrzeugtyp--> 
+                <div class="cartype"></div> <!-- Einzelner Fahrzeugtyp-->
+                <div class="cartype"></div> <!-- Einzelner Fahrzeugtyp-->
+                <div class="cartype"></div> <!-- Einzelner Fahrzeugtyp-->
+                <div class="cartype"></div> <!-- Einzelner Fahrzeugtyp-->
+                <div class="cartype"></div> <!-- Einzelner Fahrzeugtyp-->
+        </div>
+    </section>
+
+
+ <!-- Our Locations--> 
+    <section class="locations"> <!-- Hintergrund Our Locations-->
+        <h2>Unsere Standorte</h2>
+    <div class="gridlocations"> <!-- Anordnung Text & Karte-->
+       
+        <div class="text-locations"> <!-- Text Locations -->
+            <h1>Eine Auswahl von über 200 Fahrzeugen</h1>
+        </div>
+        <div class="maplocation" > <!-- Deutschland Karte-->
+            <a href="../sites/Standorte.html"><img class="map" src="../Bilder/Deutschlandkarte.png"></a> 
+        </div>
+        <div class="text-locations"> <!-- Text Locations -->
+            <h1>Deutschlandweit an über 13 Standorten</h1>
+        </div>
+
+    </div>
+        
+    </section>
+
+
+    <!-- ÜberFooter -->
+
+    <div class="überfooter"> <!-- Anordnung Überfooter content-->
+        
+            <div class="überfootercontent"> <!-- Content Überfooter-->
+                <h4>Popular Pages</h4>
+                <p><a href="..sites/Homepage.html">Homepage</a></p>
+                <p><a href="../sites/mietwagen_uebersicht.html">Mietwagen</a></p>
+                <p><a href="../sites/Standorte.html">Standorte</a></p>
+            </div>
+            <div class="überfootercontent"> <!-- Content Überfooter-->
+                <h4>Kontakt</h4>
+                <p class="Firmenname">mycar GmbH Fahrzeugvermietung</p>
+                <br></br>
+                <p>Willy-Brandt-Straße 75</p>
+                <p>20459 Hamburg</p>
+                <p>Tel: 040/822160900</p>
+                <p>Email: mycar@myhsba.de</p>
+            </div>
+            <div class="überfootercontent sm " > <!-- Content Überfooter-->
+                <h4>Social Media</h4>            
+                    <div class="socialmedia"><i class="fa-brands fa-facebook"></i></div> 
+                    <div class="socialmedia"><i class="fa-brands fa-twitter"></i></div> 
+                </br>
+                    <div class="socialmedia"><i class="fa-brands fa-linkedin"></i></div>
+                    <div class="socialmedia"><i class="fa-brands fa-instagram"></i></div>
+            </div>
+        
+        </div>
+
+    <!--FOOTER-->
+    <footer>
+        <div class="gridfooter "> <!-- Anordnung Footer content-->
+            <div class="footercontent"><a href="../sites/Impressum.html">Impressum</a></div> <!-- Footercontent -->
+            <div class="footercontent"><a href="">|</a></div> <!-- Footercontent -->
+            <div class="footercontent"><a href="../sites/AGB.html">AGB</a></div> <!-- Footercontent -->
+            <div class="footercontent"><a href="">|</a></div> <!-- Footercontent -->
+            <div class="footercontent"><a href="../sites/Datenschutz.html">Datenschutz</a></div> <!-- Footercontent -->
+            <div class="footercontent"><a href="">|</a></div> <!-- Footercontent -->
+            <div class="footercontent"><a href="../sites/Kontakt.html">Über&nbsp;uns</a></div> <!-- Footercontent -->
+           
+        </div>
+    </footer>
+
+
+</body>
+</html>

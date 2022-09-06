@@ -1,0 +1,1174 @@
+/* essentials */
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+:root{
+    --main-color:#262626 ;
+    --second-color:#99cc00;
+    --text-color:white;
+    --gradient: linear-gradient(#262626, #99cc00 );
+}
+html::-webkit-scrollbar {   /* Scrollbar */
+    width:0.5rem;
+}
+html::-webkit-scrollbar-track { /* Scrollbar */
+    background: transparent
+}
+html::-webkit-scrollbar-thumb { /* Scrollbar */
+    background: var(--second-color);
+    border-radius: 5rem;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none; 
+}
+body {
+    font-family: 'Oswald', sans-serif; 
+    font-family: 'Titillium Web', sans-serif; 
+    font-size: 15px; color: #fff;
+    line-height: 1.6;
+}
+h1{
+    font-weight: 800;
+    line-height: 1.2;
+    margin-top: 10px 0;
+    color: white;
+    border: none;
+}
+br {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 10px; /* new height */
+}
+h2 {
+    color: #99cc00; font-size: 25px; 
+    font-weight: 850;
+    padding-top: 40px;
+    text-align: center;
+}
+
+
+
+
+/* Navigationsleiste */
+header{
+    
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--main-color);
+    padding: 15px 100px;
+}
+.navbar {
+    display: flex;
+}
+.navbar li {
+    position: relative;
+    }
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 600;
+}
+.navbar a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--gradient);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Navigationsleiste */
+.fa-solid {
+    color: white;
+}
+.side-navbar-btn .fa-solid:hover {
+    color: var(--second-color);
+}
+.side-navbar-btn {
+    text-align: right;
+}
+.side-nav-dropdown a {
+    font-size: smaller;
+    font-weight: 100;
+}
+.side-navbar-btn  a:hover{
+    border-bottom: 0;
+}
+
+/* Dropdown Navigationsleiste versteckt */
+.side-nav-dropdown {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f1f1f1;
+    top:70px;
+    
+    height:fit-content;
+    width: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: visibility 2s, opacity 0.5s linear;
+    right: 0;
+}
+/* Content Dropdown Navigationsleiste */
+.side-nav-dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    text-align: left;
+    font-weight: 500;
+}
+/* Farbwechsel bei Mausbewegung über Dropdown content */
+ .side-navbar-btn .side-nav-dropdown a:hover {background-color: #ddd;}
+/* Zeigt Sidebar Dropdown */
+    div:hover  .side-nav-dropdown{
+        visibility: visible;
+        opacity: 1; 
+    }
+
+
+
+/* ÜberFooter */
+
+.überfooter {
+    width: 100%;
+    height: 220px;
+    background-color: rgb(76, 74, 74); 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    position: relative;
+    padding-left: 200px;     
+}
+.überfootercontent {
+    width: fit-content;
+    height: 170px;
+    float: left;
+    color: #fff;       
+}
+.sm {
+    margin-left: 50px;
+}
+.überfootercontent a {
+    color: #fff;
+}
+.überfootercontent h4 {
+    text-decoration: underline;
+    text-align: center;
+}
+.Firmenname {
+    font-weight: 560;
+}
+.socialmedia {
+    width: fit-content;
+    height: 20px;
+    float: left;
+    margin: 20px;
+    font-size: 30px; 
+    color:#fff;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 70px;
+    background-color: #262626 ;    
+}
+.gridfooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 360px;  
+    margin: 0 auto;    
+}
+.footercontent a {  
+    float: left;
+    color: #fff;
+    margin-right: 13px;  
+}
+
+
+
+    /* HOMEPAGE */
+
+
+/* Starting Image */
+.startingimage-homepage {
+    height: 500px;
+    background-size: 100%;
+    background-image: url(../Bilder/Homepage.jpeg);
+    color: #fff;
+    position: relative;
+    overflow: visible;  
+}
+.startingimage-homepage h1 {
+    font-size: 35px;
+    color: #000;
+    line-height: 2.5;   
+}
+.startingimage-homepage h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;    
+}
+.startingimage-homepage p {
+    margin: 20 0;
+}
+
+/* Filter */
+.slogan-card {
+    height: 300px;
+    width: 750px;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 3px 10px rgba( 0, 0, 0, 0.2);
+    padding: 10px;
+    text-align: center;
+    position: absolute;  
+    bottom: 4rem;
+    left: 25rem;
+    align-items: center;
+}
+.filter {
+    height: 150px;
+    width: 450px;
+    align-content: center;
+    z-index: 1;
+    position: relative;    
+    top: 15px;
+}
+.filter form{
+    display: flex;  
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 50px;
+    padding: 20px;
+    border-radius: 0.5rem;
+}
+.input-box {
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 150px;
+}
+.input-box span {
+    font-weight: 500;
+}
+.input-box input {
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: whitesmoke;
+    border-radius: 0.5rem;
+    font-size: 1rem ;
+}
+.select-location {
+    flex: 1 1 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: whitesmoke;
+    border-radius: 0.5rem;
+    font-size: 1rem ;
+}
+
+
+/* Button für die Buchung des Fahrzeuges*/
+.submit {
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: -10px;
+}
+.submitbutton {
+    background-color: var(--second-color);
+    border-radius: 24px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    height: 40px;
+    width: 150px;
+    overflow: visible;
+    padding: 2px 24px;
+    text-align: center;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  }
+.submitbutton:hover {
+    background: #a7dd03;    
+}
+
+
+/* Unser USP (neu)*/
+.container-usp {
+    height: 500px;
+    background-color:#262626;
+}   
+.container-usp h2 {
+    color: #99cc00;
+    font-size: 25px; 
+    font-weight: 850; 
+    text-align: center;
+    position: relative;
+    top: 20px; 
+}
+.icon {
+    font-size: 50px; 
+    color: #99cc00; 
+    float: left;
+    margin: 10px 25px;
+}
+.uspcontent {   
+    width: 500px;
+    height: 80px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 850; 
+    float: left;
+    margin: 80px 10px 20px 200px;
+}
+.uspcontent p{
+    color: #fff;
+    text-decoration: none;
+    font-weight: lighter;
+    font-style:italic;
+    font-size: 15px;
+}
+
+/* Unsere Flotte*/
+.ourfleet {
+    background-color: var(--text-color);  
+    color:black; 
+    height: 450px;
+}
+.gridfleet {
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+}   
+.ourfleet h2 {
+    color: #262626;
+    font-size: 25px; 
+    font-weight: 850; 
+    text-align: center;
+    position: relative;
+    top: 20px; 
+}
+.cartype {   
+    height: 230px;
+    width: 240px;
+    border: 1px solid var(--main-color);
+    transition: 0.5s;
+}
+.cartype:hover {
+    height: 250px;
+    width: 250px;
+}
+
+/* Unsere Standorte */
+.locations {
+    background-color: #262626;
+    height: 600px;
+    position: relative;
+}
+.gridlocations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    margin: 80px 200px;    
+}
+.locations h2 {
+    color: #99cc00;
+    font-size: 25px; 
+    font-weight: 850; 
+    text-align: center;
+    position: relative;
+    top: 20px; 
+}
+.text-locations {
+    width:270px; 
+    height:300px;  
+    text-align: center; 
+    padding-top: 120px; 
+    float: left;          
+}
+.maplocation {
+    width: 40%; 
+}
+.map {
+    height:400px; 
+    width: auto;
+    transition: 1s;
+}
+.map:hover {
+    height: 430px;
+    width: auto;
+}
+
+/* MIETAUTOS*/
+/* Starting Image */
+.startingimage_mietwagen_uebersicht {
+    background-image: url(../Bilder/Produktuebersicht.jpeg);
+    height: 400px;
+}
+/* Contentbereich */
+/* Hintergrund des Contentbereich*/
+.mietwagen_uebersicht {
+        background-color: #262626;
+        height: 1150px;
+        position: relative;
+}
+.filter-uebersicht h2 {
+    padding-top: 0px;   
+}
+.Standorte .fa-solid {
+    padding-top: 7px;
+    scale: 1.5;
+    color: black;
+}
+
+/* CSS für die Filterleiste */
+/* Überschrift "Meine Reise" */
+.mietwagen_uebersicht h2 {
+    color: black;
+    font-size: 25px;
+    font-weight: 850;
+}
+/* Div für den Filterbereich */
+.filter-uebersicht {
+    height:1000px;
+    width: 20%;
+    background-color: #99cc00;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba( 0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+/* Filter zur Autoauswahl */
+.mietwagen_uebersicht input[type=text]{
+  width: 45%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color:lightgrey ;
+}
+/* CSS Dropdown Filter */
+  .filter-uebersicht select {
+  width: 65% ;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  float: right;
+  background-color:lightgrey ;
+}
+/* CSS für Checkboxen */
+.filter-uebersicht checkbox {
+width: 45%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+ /* CSS für Such und Filter Buttom */
+.mietwagen_uebersicht input[type=submit] {
+  width: 70% ;
+  background-color:lightgrey ;
+  color: black;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 850;
+  font-size: 15px;
+  margin: auto;
+}
+/* veränderung der Buttom, wenn die Maus drüber fährt */
+.mietwagen_uebersicht input[type=submit]:hover {
+  background-color: #45a049;
+}
+/* CSS für die zurücksetzen Felder */
+.filter-uebersicht a {
+    font-weight: 850;
+    color: #000;
+}
+/* CSS für die Beschriftung der Filter */
+.mietwagen_uebersicht label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+}
+/* CSS für die divs von den Checkboxen */
+.Klimaanlage {
+  width: 50%;
+  float: left;
+}
+/* CSS für den Auswahlbereich */
+/* Div für den Mietwagenauswahlbereich */
+.mietwagen_auswahl {
+  height: 1000px;
+  width: 70%;
+  background-color: white;
+  box-shadow: 0 3px 10px rgba( 0, 0, 0, 0.2);
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+ /* CSS für die Übersicht der Verfügbaren Autos */
+ /* Tabellenstruktur für die Anordnug */
+.table_auto_übersicht {
+  display:table;
+  table-layout:fixed;
+  border-collapse: collapse;
+  border: solid;
+  border-width: 10px;
+  border-color: #262626;
+  background:#eee;
+  width:100%;
+  height:100%;
+  position: absolute;
+}
+/* Tabellenspalte */
+.row_auto_übersicht {
+  display: table-row;
+}
+/* Tabellenzeile */
+.cell_auto_übersicht {
+  display: table-cell;
+  border: solid;
+  border-width: 10px;
+  border-color: #262626;
+  padding: 10px;
+}
+/* Tabelleninhalt */
+/* Überschrift für jewaliges Feld  */
+.cell_auto_übersicht h2 {
+  color: black;
+  font-size: 20px;
+  font-weight: 850;
+  text-align: center;
+}
+/* Preis*/
+.cell_auto_übersicht h3 {
+  color: black;
+  font-size: 20px;
+  font-weight: 850;
+}
+/* Preis pro Tag */
+
+.pro_tag {
+  font-size: 15px;
+  color: black;
+}
+/* Text für dei verfügbarkeit */
+.verfügbarkeit {
+  font-size: 15px;
+  color: black;
+  text-align: bottom;
+}
+/* Bild von einem Auto */
+.auto_img {
+background-image: url(../Bilder/Homepage.jpeg);
+width: 100%;
+height:149px;
+margin-top: 10px;
+}
+
+/* STANDORTE */
+.background {
+    background-color: #383737;
+}
+.content-standorte {
+    max-width: 1200px;
+    height: fit-content;
+    margin: 30px auto;
+    overflow: auto;
+    padding: 0, 40px;
+    position: relative;
+    top:70px;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+button {
+    cursor: pointer;
+}
+.content-standorte h2 {
+    
+    padding-top: 0px;
+    padding-bottom: 20px ;
+    padding-left:20px;
+    color: #99cc00;
+    font-size: 25px; 
+    font-weight: 850; 
+    text-align: center;
+    position: relative;
+}
+.Stadt {
+    width: 100%; 
+    height: 300px; 
+    border:1px solid black;
+    transition: 0.5s;
+    margin: 20px 0px;   
+}
+.Stadt h3 {
+    color: white; 
+    font-size: 55px; 
+    font-weight: 900; 
+    text-shadow: 2px 2px black; 
+    text-align: center;
+    padding-top: 90px;    
+}
+.Stadt:hover {
+    scale: 1.1  ;
+    overflow: hidden;
+}
+    .Hamburg {
+        background-image: url(../Bilder/Hamburg.jpeg); 
+        background-size: 100%; 
+        height: 300px;  
+    }
+    .Berlin { 
+        background-image: url(../Bilder/Berlin.jpeg); 
+        background-size: 100%; 
+        height: 300px;  
+    }
+    .München {
+        background-image: url(../Bilder/Muenchen.jpeg);
+        background-size: 100%; 
+        height: 300px;   
+    }
+    .Köln {
+        background-image: url(../Bilder/Koeln.jpeg); 
+        background-size: 100%; 
+        height: 300px;   
+    }
+    .Dortmund { 
+        background-image: url(../Bilder/Dortmund.jpeg);  
+        background-size: 100%; 
+        height: 300px;   
+    }
+    .Leipzig {
+        background-image: url(../Bilder/Leipzig.jpeg);
+        background-size: 100%; 
+        height: 300px;   
+    }
+    .Bremen {
+        background-image: url(../Bilder/Bremen.jpeg); 
+        background-size: 100%; 
+        height: 300px; 
+    }  
+    .Bielefeld {
+        background-image: url(../Bilder/Bielefeld.jpeg); 
+        background-size: 100%; 
+        height: 300px;   
+    }
+    .Freiburg {
+        background-image: url(../Bilder/Freiburg.jpeg); 
+        background-size: 100%; 
+        height: 300px;   
+    }
+    .Paderborn {
+        background-image: url(../Bilder/Paderborn.jpeg); 
+        background-size: 100%; 
+        height: 300px;   
+    }
+    .Rostock {
+        background-image: url(../Bilder/Rostock.jpeg); 
+        background-size: 100%; 
+        height: 300px;          
+    }
+    .Dresden {
+        background-image: url(../Bilder/Dresden.jpeg); 
+        background-size: 100%; 
+        height: 300px;
+        
+    }
+    .Nürnberg {
+        background-image: url(../Bilder/Nuernberg.jpeg); 
+        background-size: 100%; 
+        height: 300px;   
+    }
+    .Bochum {
+        background-image: url(../Bilder/Bochum.jpeg); 
+        background-size: 100%; 
+        height: 300px;   
+    }
+                    
+        
+
+/* MEINE BUCHUNGEN */
+.startingimage-meinebuchungen {
+    background-image: url(../Bilder/MeineBuchungen.jpeg);
+    height: 400px;
+}
+.background-meinebuchungen {
+    background-color: #262626;
+    height: 600px;
+    position: relative;
+}
+.content-box-meinebuchungen {
+    height: 450px;
+    width: 1200px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba( 0, 0, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    margin-left: 150px;
+}
+.Buchung {
+    position: relative;
+    height: 40px;
+    width: 1100px;
+    border-bottom: 1px solid gray;
+    background-color: var(--second-color);
+    text-align: left;
+    padding: 10px 15px;
+    margin: auto;   
+}
+
+/* Fahrzeugdetails */
+.startingimage-fahrzeugdetails {
+    background-image: url(../Bilder/Detailseite.jpeg) ;
+    height: 400px ;
+}
+.Fahrzeugdetails {
+        background-color: #262626;
+        height: 650px;
+        position: relative;       
+}
+.Fahrzeugdetails h2 {
+    margin-bottom: 25px;
+}
+.griddetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    margin: 0 250px;
+    align-items: center;   
+    height: 450px;
+}
+.box-details {
+    height: 500px;
+    width: 450px;
+    position: relative;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba( 0, 0, 0, 0.2);  
+}
+.spezifikationen {
+ height: 500px;
+ width: 450px;
+ box-sizing: border-box;
+ padding: 20px 20px;
+}
+.spezifikationen p{
+    overflow-wrap: break-word;
+    color: #262626;
+    font-size: 16px;
+    padding: auto;
+}
+.cartypeimage {
+    height: 300px;
+    width: 450px;
+    background-color: yellow;
+    margin: auto;
+}
+.LoginTo {
+    width: 350px;
+    height: 70px;
+    background-color:  #262626; 
+    border: none;
+    color: white;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 32px;
+    font-size: 12px;
+    margin: 0 11% ;   
+}
+.buttonbuchung {
+  background-color:#99cc00;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  margin: 5% 11% 5%;
+  cursor: pointer;
+  font-size: 20px;
+  height: 70px;
+  width: 350px;
+  overflow: visible;
+  padding: 2px 24px;
+  text-align: center;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  will-change: transform,opacity;  z-index: 0;
+}
+.buttonbuchung:hover {
+  background: #678901;
+  color: white;
+}
+.buttonbuchung:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+.buttonbuchung:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+.buttonbuchung:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+/* Über uns / Kontakt */
+.background-kontakt {
+    background-color: #262626;
+    height: 600px;
+    position: relative;
+}
+.starting-image-kontakt {
+    background-image: url(../Bilder/UnserTeam.jpeg);
+    background-size: 100%;
+    height: 300px;
+}
+.background-kontakt img {
+    width: 100%;
+}
+.background-kontakt p{
+    color: #000;
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 15px;
+    margin-top: 10px 0; 
+}
+.background-kontakt .fa-solid {
+    color:#99cc00;font-size:55px;
+}
+.Profile {
+    width:100%;
+    height:700px;
+    background-color: #383737;
+    color:#99cc00;
+    font-size: 25px;
+    font-weight: 850;
+    text-align: center;
+    padding-top: 40px;
+}
+.Personen {
+    width: 280px;
+    height: 460px;
+    background-color: #fff;
+    float: left;
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 40px 0px 20px 62px;
+}
+.kreis {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-color: #fff;
+    align-items: center;
+    margin: 30px 10px 20px 40px;
+  }
+.rund {
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    align-items: center;
+}
+.texte {
+    width: 280px;
+    height: 200px;
+    background-color: #fff;
+    float: left;
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Log In */
+.login_bereich {
+    background-color: #383737;
+    height: 670px;
+    position: relative;
+    top: 70px;
+  }
+.background-login {
+    height: 500px;
+    background-size: 100%;
+    background-image: url(../Bilder/Login.jpeg);
+    width: 1400px;
+    margin:50px;
+    position: absolute;
+    z-index: 1;
+  }
+  .login_feld {
+    height: 240px;
+    width: 650px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba( 0, 0, 0, 0.2);
+    padding: 20px ;
+    position: relative;
+    z-index: 2;
+    margin:auto;
+    top: 120px;
+    opacity: 0.95;
+  }
+  .login_feld h2{
+    padding-top: 0;
+}
+  .login_feld form input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .login_feld form input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .login_feld form input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .login_feld form input[type=submit]:hover {
+    background-color: #383737;
+  }
+
+/* Log Out Seite */
+.logout_bereich {
+
+    background-color: #383737;
+    height: 670px;
+    position: relative;
+    top: 70px;
+}
+
+.background-logout {
+height: 500px;
+background-size: 100%;
+background-image: url(../Bilder/Abmelden.jpeg);
+width: 1400px;
+margin:50px;
+position: absolute;
+overflow: visible;
+}
+
+.logout_feld {
+height: 220px;
+width: 650px;
+background-color: white;
+box-shadow: 0 3px 10px rgba( 0, 0, 0, 0.2);
+padding: 20px;
+position: relative;
+text-align: center;
+top:150px;
+margin: auto;
+opacity: 0,95;
+}
+
+.logout_feld h2{
+    padding-top: 0;
+}
+
+.logout_feld h3 {
+color: black;
+font-size: 25px;
+font-weight: 850;
+}
+
+/* Abmelde Bottom */
+
+.logout_feld input[type=submit] {
+width: 100%;
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.logout_feld input[type=submit]:hover {
+background-color: #383737;
+}
+
+
+ /* Statische Seiten */
+
+.static-background {
+    width:100%; 
+    height: 1100px;
+    background-color: #383737; 
+    margin-top: 70px;
+}
+.static-content-box {
+    width: 85%;
+    height: 900px;
+    background-color: #fff;
+    float: left;
+    margin: 50px 40px 0px 100px;
+    height: fit-content;
+}
+
+   /* AGB */
+    .agb-text {
+        text-align: left;
+        padding-top: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 25px;
+        color:black;
+        font-weight: 700;        
+} 
+
+    /* DATENSCHUTZ */
+    .datenschutz-text {
+        text-align: left;
+        padding-top: 25px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 25px;
+        color:black;
+        font-weight: 700;
+    }
+    .datenschutz-text h4 {
+            line-height: 1.2;
+            margin-top: 10px 0;
+            margin-bottom: 20px;
+            color:#fff  
+    }
+    .static-background-datenschutz {
+        height: 1300px !important;
+        width:100%; 
+        background-color: #383737; 
+        margin-top: 70px;
+    }
+
+    /* IMPRESSUM */
+    .static-background-impressum {
+        width:100%; 
+        height: 900px;
+        background-color: #383737; 
+        margin-top: 70px;
+    }
+    .static-content-impressum {
+    width: 85%;
+    height: 200px;
+    background-color: #fff;
+    float: left;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    padding-top: 45px;
+    padding-left: 30px;
+    color:black;
+    margin: 50px 40px 0px 100px;
+    }
+    .static-content-impressum h3{
+        width:50%; float: left; font-weight: 700;
+    }
+    .static-content-impressum h4{
+        margin-bottom: 10px;
+        margin-left: 1000px;
+        font-weight: 500;
+    }
+    .static-content-impressum p{
+        margin-left: 1000px
+    }
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
