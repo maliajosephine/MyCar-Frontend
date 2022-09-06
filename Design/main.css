@@ -436,6 +436,7 @@ footer {
 
 /* MIETAUTOS*/
 /* Starting Image */
+/* Starting Image */
 .startingimage_mietwagen_uebersicht {
     background-image: url(../Bilder/Produktuebersicht.jpeg);
     height: 400px;
@@ -444,30 +445,22 @@ footer {
 /* Hintergrund des Contentbereich*/
 .mietwagen_uebersicht {
         background-color: #262626;
-        height: 1150px;
+        height: 1000px;
         position: relative;
 }
-.filter-uebersicht h2 {
-    padding-top: 0px;   
-}
-.Standorte .fa-solid {
-    padding-top: 7px;
-    scale: 1.5;
-    color: black;
-}
-
 /* CSS für die Filterleiste */
 /* Überschrift "Meine Reise" */
 .mietwagen_uebersicht h2 {
     color: black;
     font-size: 25px;
     font-weight: 850;
+    padding-top: 0px;
 }
 /* Div für den Filterbereich */
 .filter-uebersicht {
-    height:1000px;
+    height:900px;
     width: 20%;
-    background-color: #99cc00;
+    background-color: white;
     border-radius: 5px;
     box-shadow: 0 3px 10px rgba( 0, 0, 0, 0.2);
     padding: 20px;
@@ -475,17 +468,21 @@ footer {
     position: absolute;
     top: 50px;
     left: 50px;
+    border: solid;
+    border-width: 5px;
+    border-color: #262626;
 }
-/* Filter zur Autoauswahl */
+/*Filter für den Buchungszeitraum*/
 .mietwagen_uebersicht input[type=text]{
-  width: 45%;
+  width: 49%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  background-color:lightgrey ;
+  background-color:#262626;
+  color: white;
 }
 /* CSS Dropdown Filter */
   .filter-uebersicht select {
@@ -498,6 +495,26 @@ footer {
   box-sizing: border-box;
   float: right;
   background-color:lightgrey ;
+}
+/* CSS für den Standort Dropdownfilter */
+.standort select {
+  width: 85% ;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  float: right;
+  background-color:#262626;
+  color:white;
+}
+/* CSS für Standort Icon (location dot) */
+.Standorte .fa-solid {
+    padding-top: 7px;
+    scale: 1.5;
+    color: black;
+    /* padding-left: 40px; */
 }
 /* CSS für Checkboxen */
 .filter-uebersicht checkbox {
@@ -512,7 +529,7 @@ box-sizing: border-box;
  /* CSS für Such und Filter Buttom */
 .mietwagen_uebersicht input[type=submit] {
   width: 70% ;
-  background-color:lightgrey ;
+  background-color:#99cc00 ;
   color: black;
   padding: 12px 20px;
   margin: 8px 0;
@@ -550,72 +567,84 @@ box-sizing: border-box;
 .mietwagen_auswahl {
   height: 1000px;
   width: 70%;
-  background-color: white;
-  box-shadow: 0 3px 10px rgba( 0, 0, 0, 0.2);
+  background-color: #262626;
   position: absolute;
   top: 50px;
   right: 50px;
 }
  /* CSS für die Übersicht der Verfügbaren Autos */
+ /* Zeile für die Tabellenansicht der Autoauswahl */
+ .mietwagen_auswahl_row {
+   width: 100%;
+   height: 300px;
+ }
  /* Tabellenstruktur für die Anordnug */
-.table_auto_übersicht {
-  display:table;
-  table-layout:fixed;
-  border-collapse: collapse;
-  border: solid;
-  border-width: 10px;
-  border-color: #262626;
-  background:#eee;
-  width:100%;
-  height:100%;
-  position: absolute;
-}
-/* Tabellenspalte */
-.row_auto_übersicht {
-  display: table-row;
-}
-/* Tabellenzeile */
-.cell_auto_übersicht {
-  display: table-cell;
-  border: solid;
-  border-width: 10px;
-  border-color: #262626;
-  padding: 10px;
-}
+ .mietwagen_auswahlfeld {
+   width: 33%;
+   margin:auto;
+   padding:15px;
+   float: left;
+   border: solid;
+   border-width: 5px;
+   border-color: #262626;
+   position: relative;
+   background-color: white;
+   height: 100%;
+   cursor: pointer;
+ }
+/* veränderung der Autoauswahlfelder beim rüberhovern */
+.mietwagen_auswahlfeld:hover {
+  opacity: 0.7;
+  }
 /* Tabelleninhalt */
 /* Überschrift für jewaliges Feld  */
-.cell_auto_übersicht h2 {
+.mietwagen_auswahlfeld h2 {
   color: black;
   font-size: 20px;
   font-weight: 850;
   text-align: center;
 }
+/* Bild von dem jewaligen Auto */
+.auswahlfeld_img {
+background-image: url(../Bilder/Homepage.jpeg);
+width: 100%;
+height:150px;
+margin-top: 10px;
+}
+/* Div für den Preis */
+.auswahlfeld_preis {
+  float: left;
+  width: 30%;
+}
 /* Preis*/
-.cell_auto_übersicht h3 {
+.auswahlfeld_preis h3 {
   color: black;
   font-size: 20px;
   font-weight: 850;
 }
-/* Preis pro Tag */
-
-.pro_tag {
-  font-size: 15px;
+/* Div für den Text Pro Tag */
+.auswahlfeld_text {
+  float: left;
+  width: 70%;
+  padding-left: 10px;
+}
+/* Attribute für den Text "pro Tag" */
+.auswahlfeld_text p {
+  margin-top: 6px;
   color: black;
+}
+/* Div für die Verfügbarkeit */
+.auswahlfeld_verfügbarkeit{
+  width: 100%;
+  height: 20px;
+  float: left;
+  margin-top: 30px;
 }
 /* Text für dei verfügbarkeit */
-.verfügbarkeit {
-  font-size: 15px;
+.auswahlfeld_verfügbarkeit p {
+  font-size: 10px;
   color: black;
-  text-align: bottom;
 }
-/* Bild von einem Auto */
-.auto_img {
-background-image: url(../Bilder/Homepage.jpeg);
-width: 100%;
-height:149px;
-margin-top: 10px;
-}
-
 /* STANDORTE */
 .background {
     background-color: #383737;
