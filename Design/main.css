@@ -434,8 +434,8 @@ footer {
     width: auto;
 }
 
-/* MIETAUTOS*/
-/* Starting Image */
+        /* MIETAUTOS*/
+
 /* Starting Image */
 .startingimage_mietwagen_uebersicht {
     background-image: url(../Bilder/Produktuebersicht.jpeg);
@@ -592,7 +592,7 @@ box-sizing: border-box;
    height: 100%;
    cursor: pointer;
  }
-/* veränderung der Autoauswahlfelder beim rüberhovern */
+/* Veränderung der Autoauswahlfelder beim rüberhovern */
 .mietwagen_auswahlfeld:hover {
   opacity: 0.7;
   }
@@ -645,7 +645,10 @@ margin-top: 10px;
   font-size: 10px;
   color: black;
 }
-/* STANDORTE */
+
+
+
+        /* STANDORTE */
 .background {
     background-color: #383737;
 }
@@ -767,7 +770,7 @@ button {
                     
         
 
-/* MEINE BUCHUNGEN */
+        /* MEINE BUCHUNGEN */
 .startingimage-meinebuchungen {
     background-image: url(../Bilder/MeineBuchungen.jpeg);
     height: 400px;
@@ -890,7 +893,7 @@ button {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
 
-/* Über uns / Kontakt */
+        /* Über uns / Kontakt */
 .background-kontakt {
     background-color: #262626;
     height: 600px;
@@ -960,7 +963,7 @@ button {
     font-weight: 500;
 }
 
-/* Log In */
+        /* Log In */
 .login_bereich {
     background-color: #383737;
     height: 670px;
@@ -1023,7 +1026,7 @@ button {
     background-color: #383737;
   }
 
-/* Log Out Seite */
+        /* Log Out Seite */
 .logout_bereich {
 
     background-color: #383737;
@@ -1083,7 +1086,7 @@ background-color: #383737;
 }
 
 
- /* Statische Seiten */
+        /* Statische Seiten */
 
 .static-background {
     width:100%; 
@@ -1100,7 +1103,7 @@ background-color: #383737;
     height: fit-content;
 }
 
-   /* AGB */
+    /* AGB */
     .agb-text {
         text-align: left;
         padding-top: 25px;
