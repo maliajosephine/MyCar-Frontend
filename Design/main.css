@@ -467,10 +467,17 @@ footer {
         /* MIETAUTOS*/
 
 /* Starting Image */
+
 .startingimage_mietwagen_uebersicht {
     background-image: url(../Bilder/Produktuebersicht.jpeg);
-    height: 400px;
+    height: 400px ;
+    background-size: 100%;
+    color: #fff;
+    position: relative;
+    overflow: visible;  
 }
+
+
 /* Contentbereich */
 /* Hintergrund des Contentbereich*/
 .mietwagen_uebersicht {
