@@ -846,6 +846,38 @@ button {
 .Fahrzeugdetails h2 {
     margin-bottom: 25px;
 }
+
+
+.Headline_one {
+color: #99cc00;
+
+font-weight: 600;
+font-size: 45px;
+text-align: center;
+text-decoration: underline;
+}
+
+.Zeitraum {
+    text-align: center;
+    color: black
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.Nachricht {
+    font-weight: 500;
+    font-style: italic;
+    
+    }
+
+.Preis {
+    text-align: right;
+ font-weight: 800;
+font-size: ;
+}
+
+
+
 .griddetails {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -874,12 +906,20 @@ button {
     font-size: 16px;
     padding: auto;
 }
+
+
 .cartypeimage {
+    background-image: url(../Bilder/Cabrio.jpeg) ;
     height: 300px;
     width: 450px;
-    background-color: yellow;
     margin: auto;
+    background-size: 100%;
+    color: #fff;
+    position: relative;
+    overflow: visible;  
 }
+
+
 .LoginTo {
     width: 350px;
     height: 70px;
