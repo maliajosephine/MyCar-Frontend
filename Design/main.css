@@ -1125,6 +1125,52 @@ background-color: #383737;
 }
 
 
+/* Buchungsbestaetigung Seite */
+
+
+.logout_bereich {
+
+    background-color: #383737;
+    height: 670px;
+    position: relative;
+    top: 70px;
+}
+
+.background-logout {
+height: 500px;
+background-size: 100%;
+background-image: url(../Bilder/Abmelden.jpeg);
+width: 1400px;
+margin:50px;
+position: absolute;
+overflow: visible;
+}
+
+.logout_feld {
+height: 220px;
+width: 650px;
+background-color: white;
+box-shadow: 0 3px 10px rgba( 0, 0, 0, 0.2);
+padding: 20px;
+position: relative;
+text-align: center;
+top:150px;
+margin: auto;
+opacity: 0,95;
+}
+
+.logout_feld h2{
+    padding-top: 0;
+}
+
+.logout_feld h3 {
+color: black;
+font-size: 25px;
+font-weight: 850;
+}
+
+
+
         /* Statische Seiten */
 
 .static-background {
